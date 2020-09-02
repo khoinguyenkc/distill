@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+#thats requiring the environment
+
+require './lib/distill'
+#this is an ABSOLUTE path! we still dont know hat it work. for now
+#it's loading the main file in the lib folder. lib/distill.rb
+#that file itself, distill.rb require other stuff surrounding in, inside distill.rb itself
+#so you're not loading these files here(version.rb, cli.rb etc..)
+
+Distill::CLI.new.call()
+#Distill::Scraper.new.books_in_genre()
+#Distill::Scraper.new.book_detail(Distill::Book.all[2])
+#puts "hello"
+#puts Distill::Book.all[2].title
+#puts Distill::Book.all[2].authorname
+#puts Distill::Book.all[2].description
+
+#Distill::Scraper.new.testing('https://www.goodreads.com/genres/biography')
